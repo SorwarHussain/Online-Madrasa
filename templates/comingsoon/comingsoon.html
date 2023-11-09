@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="/static/css/comingsoon/comingsoon.css">
+  </head>
+<body>
+    <x-sign>
+        Coming Soon<br><small>ইন শা আল্লাহ</small> 
+      </x-sign>
+      <x-sign>
+        জাযাকাল্লাহ খাইরান
+      </x-sign>
+      
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    const signs = document.querySelectorAll('x-sign')
+    const randomIn = (min, max) => (
+      Math.floor(Math.random() * (max - min + 1) + min)
+    )
+    
+    const mixupInterval = el => {
+      const ms = randomIn(2000, 4000)
+      el.style.setProperty('--interval', `${ms}ms`)
+    }
+    
+    signs.forEach(el => {
+      mixupInterval(el)
+      el.addEventListener('webkitAnimationIteration', () => {
+        mixupInterval(el)
+      })
+    })
+  </script> 
+</body>

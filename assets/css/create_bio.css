@@ -1,0 +1,214 @@
+sup {
+    color: red;
+  }
+
+  label {
+    /*color: darkviolet;*/
+    /*color:blue;*/
+    color: #402a89;
+    font-size: 16px;
+    font-family: KohinoorBangla_Regular;
+  }
+  h1{
+    text-align: center;
+    padding: 25px;
+    font-size: 34px;
+    background: linear-gradient(-135deg,#be02da,#402a89);
+    color: white;
+    font-family:  HindSiliguri_Medium;
+  }
+  main {
+    /*border: 1px solid sandybrown;*/
+    border: 1px solid gray;
+    margin: 50px 10% 50px 30%;
+  }
+  main p {
+    text-align: center;
+    /*display: none;*/
+    color: red;
+    /*background: rgb(165, 120, 177);*/
+    background:#d2d3e6 ;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  form {
+    margin: 10px;
+
+  }
+  form fieldset {
+    margin-bottom: 30px;
+    padding:13px 10px;
+  }
+  form fieldset input,
+  select,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    font-family: KohinoorBangla_Regular;
+  }
+  form fieldset legend{
+    font-size: 18px;
+    font-weight: 900;
+    font-family: KohinoorBangla_Regular;
+  }
+  form fieldset input,select{
+    height: 34px;
+  }
+  form fieldset input,textarea{
+    margin-bottom: 5px;
+   padding-left:8px;
+    
+  }
+  form fieldset textarea{
+    height: 130px;
+    
+  }
+  form fieldset input::placeholder{
+    color:blue;
+    font-size: 13px;
+  }
+ 
+  .head{
+    background: #2e113f;
+    text-align: center;
+    padding: 10px 5px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .PIM,.PIW{
+    display: none;
+  }
+  .MIM,.MIW{
+    display: none;
+  }
+  #DOM,#DOW{
+    display:none;
+  }
+  .EQC1,.EQC2,.EQC3,.EQC4,.EQC5,.EQC6{
+    display: none;
+  }
+  .M,.AMC1,.AMC3,.AMC6{
+    display: none;
+  }
+  .KMC1,.KMC2,.KMC3,.KMC4,.KMC5{
+    display: none;
+  }
+  #probasi,#probasiWomen{
+    display: none;
+  }
+  #MI1,#MI2,#MI3,#MI4,#MI5{
+    display: none;
+  }
+  .line{
+    width: 100%;
+    border-bottom: 5px solid #402a89;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  /*submit button*/
+  .button_wrapper{
+    display:flex;
+    justify-content: space-between;
+  }
+  .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #402a89;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 20px;
+  width: 48%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-bottom: 30px;
+  /*margin: 20px 24% 30px;*/
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 1px;
+  /*right: -20px;*/
+  right: 0px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*disabled button*/
+.btn-disabled{
+  background: rgba(64, 42, 137, .5);
+}
+
+.btn-disabled span:after{
+  
+  content: none;
+}
+.btn-disabled:hover span {
+  padding-left: 25px;
+}
+/*end of disabled button*/
+  /*responsive*/
+ @media screen and (max-width:1300px){
+    main{
+      margin: 50px 10%;
+    }
+     h1{
+       font-size: 30px;
+       font-weight: 700;
+     }
+     .button {
+       font-size: 28px;
+       font-weight: 700;
+     }
+}
+@media screen and (max-width:1000px){
+   h1{
+     font-size: 26px;
+     font-weight: 700;
+   }
+   .button {
+     font-size: 24px;
+     font-weight: 700;
+   }
+}
+  @media screen and (max-width:770px){
+    main{
+    
+      margin: 20px 6% 50px 10%;
+    }
+      
+    }
+    @media screen and (max-width:700px){
+      main{
+      
+        margin: 20px 2% 50px;
+      }
+      .button_wrapper{
+        flex-wrap: wrap;
+      }
+      .button {
+        width: 100%;
+
+      }
+      }
+  /*end of responsive*/

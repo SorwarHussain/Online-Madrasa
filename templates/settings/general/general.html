@@ -1,0 +1,25 @@
+  <head>
+    <link rel="stylesheet" href="/static/css/settings/general/general.css">
+  </head>
+  <body>
+    <!--<h1>General</h1>-->
+    <div class="ge_pa_navbar">
+    <a href="{% url 'general' %}" style="text-decoration: none"><button style="background: #402a89;color:white;">GENERAL</button></a>
+    <a href="{% url 'change_password' user.id %}" style="text-decoration: none"><button>PASSWORD</button></a>
+  </div>
+  <div class="general">
+    <h1>Your profile</h1>
+    <h4>Your Username</h4>
+    <p>{{user.username}}</p>
+    <h4>Your Email</h4>
+    <p>{{user.email}}</p>
+    <h4>Delete Accounts</h4>
+    <div id="warning">Delete your account and all information related to your account. Please be aware that all data will be permanently lost if you delete your account.</div>
+    <!--<form method="POST">
+      {% csrf_token %}-->
+      <a href=""><button class="button disabled" type="submit" style="vertical-align:middle" disabled><span>Delete </span></button></a>
+    <a href="/" class="button1">Cancel </a>
+   
+  </div>
+  <!--  </form>jqurey code --> 
+  </body>

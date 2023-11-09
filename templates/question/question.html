@@ -1,0 +1,38 @@
+  <head>
+    <!-- for icons plus minus font awesome-->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/question/question.css">
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+  </head>
+  <body>
+    <h1>প্রশ্ন ও উত্তর</h1>
+   
+  
+  
+  <!-- jqurey code -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      $(".card-header").click(function(){
+         // self clicking close
+         if($(this).next(".card-body").hasClass("active")){
+           $(this).next(".card-body").removeClass("active").slideUp()
+          $(this).children("span").removeClass("fa-close").addClass("fa-plus")	
+         }
+       else{
+       $(".card .card-body").removeClass("active").slideUp()
+       $(".card .card-header span").removeClass("fa-close").addClass("fa-plus");
+         $(this).next(".card-body").addClass("active").slideDown()
+          $(this).children("span").removeClass("fa-plus").addClass("fa-close")
+        }
+      })
+    })
+  
+  </script>  
+  </body>

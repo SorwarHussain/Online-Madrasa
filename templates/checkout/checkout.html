@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/css/contact_request/contact_request.css">
+        <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous"
+      />
+    </head>
+<body>
+  
+  <div class="abedon">
+    <p>কোর্সটিতে ভর্তি হতে নির্ধারিত টাকা পরিশোধ করতে হবে। অনুগ্রহ পূর্বক ফর্মটি পূরণের মাধমের আপনার আবেদন সম্পন্ন করুন। আবেদন সম্পন্ন হলে সর্বোচ্চ ২ কর্ম দিবসের মধ্যে আপনার প্রদত্ত ই-মেইলে জানিয়ে দেয়া হবে ইন শা আল্লাহ। </p>
+  <a href="https://www.youtube.com" target="_blank">
+  <div class="center">
+    <i class="fab fa-youtube"></i>
+    <p>যেভাবে আবেদন করবেন (ভিডিও)</p>
+  </div></a>
+  <form method="post" action="">
+    {% csrf_token %}
+    <label>আপনার নাম <sup>*</sup></label>
+    <input type="text" name="name" value="{{user.username}}" required>
+    <label>আপনার ই-মেইল <sup>*</sup></label>
+    <input type="email"name="email" value="{{user.email}}" required>
+    <label>মোবাইল নাম্বার <sup>*</sup></label>
+    <input type="text" name="number" required>
+    <table style="margin-top:10px;" class="text-center">
+      <tr>
+        <th>কোর্সের নাম?</th>
+        <th>পেমেন্টের পরিমান</th>
+      </tr>
+      <tr>
+        <td><span name="amount" style="padding: 5px 20px;">{{course.title}} </span></td>
+        <td><span name="amount">{{course.fee}}<i class="fa-solid fa-bangladeshi-taka-sign"></i></span><i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+      </tr>
+      
+    </table>
+      <label>যেকোনো একটি মাধ্যমে পেমেন্ট করুন <sup>*</sup></label><br>
+      <div class="radio bk">
+      <input type="radio" id="html">
+      <label for="html" ><span>Bkash</span></label><img class="img1" src="/static/css/contact_request/1.png" alt="Bkash" width="60" height="40"></div>
+      <div class="bkash">
+        <p class="amountB">নিম্নলিখিত Bkash(Personal) নাম্বারে <span class="taka">১০০ টাকা Send Money</span> করুন। </p>
+        <p>Bkash Personal Number: 01789-612005</p>
+        <div class="bka"><label style="padding-bottom: 7px;">Your Bkash Number</label><br><input type="text" placeholder="01728002956" name="bkashn" id="HbkashNumber"required></div>
+        <div class="bka"> <label style="padding-bottom: 7px;">Transaction ID</label><br><input type="text"  placeholder="6CIE123OEP" name="bkashid" id="HbkashId" required></div>
+      </div>
+      <div class="radio roc">
+      <input type="radio" id="css" >
+      <label for="css"><span>Rocket</span></label><img class="img1" src="/static/css/contact_request/2.png" alt="Rocket" width="60" height="41"></div>
+      <div class="rocket">
+        <p>নিম্নলিখিত Rocket(Personal) নাম্বারে <span class="taka">১০০ টাকা Send Money</span> করুন। </p>
+        <p>Rocket Personal Number: 01789-612005</p>
+        <div class="bka"><label style="padding-bottom: 7px;">Your Rocket Number</label><br> <input name="rocketn" type="text" id="HrocketNumber" placeholder="01728002956" required></div>
+        <div class="bka"> <label style="padding-bottom: 7px;">Transaction ID</label><br><input type="text" name="rocketid" id="HrocketId" placeholder="6CIE123OEP"required></div>
+      </div>
+
+      <div class="radio nag">
+      <input type="radio" id="java">
+      <label for="java"><span>Nagad</span></label><img class="img1" src="/static/css/contact_request/3.png" alt="Nagad" width="60" height="40"></div>
+    <div class="nagad">
+        <p>নিম্নলিখিত Nagad(Personal) নাম্বারে <span class="taka">১০০ টাকা Send Money</span> করুন। </p>
+        <p>Nagad Personal Number: 01789-612005</p>
+        <div class="bka"><label style="padding-bottom: 7px;">Your Nagad Number</label> <br><input name="nagadn" type="text" id="HnagadNumber" placeholder="01728002956"required></div>
+        <div class="bka"> <label style="padding-bottom: 7px;">Transaction ID</label><br><input name="nagadid" type="text" id="HnagadId" placeholder="6CIE123OEP" required></div>
+      </div>
+     
+<button class="button" type="submit" id="Ebtn" style="vertical-align:middle"><span>Submit </span></button>
+  </form>
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/static/script/contact_request/contact_request_payment.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/*search_box*//*
+.search-box-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.search-box label,select,.butt{
+  font-family: KohinoorBangla_Regular;
+}
+.search-box {
+  width: 400px;
+  position: absolute;
+ /* background: linear-gradient(to right, #aa076b, #61045f);*/
+ /*background: rgb(12, 119, 66);*/
+  /*background:#2e113f;*/
+  /*background: #2a2c89;*/
+ /* background: #402a89;*/
+ background: #1d6b87;
+  top: 180px;
+  left: 5%;
+ /* z-index: 1;*/
+  border-radius: 5px;
+  padding:5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+ /* background-attachment: fixed;*/
+  /*DarkMagenta*/
+}
+.search-box form {
+  position: relative;
+  padding: 10px 10px 0 14px;
+  display: flex;
+  flex-direction: column;
+}
+.search-box form .sear_op {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+
+}
+.search-box form .sear_op label {
+  font-size: 18px;
+  color: white;
+  padding: 2px;
+  font-weight: 600;
+}
+.search-box form .butt {
+  /*background: linear-gradient(45deg, #8200f4 0%, #000 100%);*/
+ /* background: #000;*/
+  /*05abe0*/
+  background: white;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  /*height: 32px;*/
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  padding: 6px 0;
+  align-items: center;
+  color: #000;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.search-box form .butt i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.search-box form .sear_op select {
+  /*height: 32px;*/
+ /*background: linear-gradient(-135deg, #c850c0, #000);*/
+/*background: #000;*/
+  /*4158d8*/
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding:2px 0 2px 5px;
+  /*color: #fff;,.moulovitwo,.hobithree,.sunamfour*/
+  color:#2e113f;
+ 
+}
+
+.search-box .sear_op #upazila_sylhet,#upazila_moulovibazar,#upazila_hobiganj,#upazila_sunamganj{
+  display: none;
+}
+/*age_wrap*/
+.age_wrap{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.age_wrap .sear_op_age{
+  width:40%;
+  padding:2px 10px;
+}/*
+.age_wrap span{
+  color: white;
+  font-size: 30px;
+}*/
+/*new*/
+/*responsive*/
+
+@media (max-width: 1400px) {
+  .search-box {
+    left: 3%;
+  
+  }
+}
+@media (max-width: 1300px) {
+  .search-box {
+    width: 340px;
+  
+  }
+}
+@media (max-width: 1050px) {
+  .search-box {
+    top:400px;
+  }
+}
+@media (max-width: 960px) {
+  .search-box {
+    top:440px;
+  }
+}
+@media (max-width: 642px) {
+  .search-box {
+    top:500px;
+  }
+}
+@media (max-width: 560px) {
+  .search-box {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+  }
+}
+@media (max-width: 500px) {
+  .search-box {
+    top:520px;
+  }
+}
+@media (max-width: 490px) {
+  .search-box {
+    top:560px;
+  }
+}
+@media (max-width: 432px) {
+  .search-box {
+    top:600px;
+  }
+}
+/*
+@media (max-width: 880px) {
+  .search-box {
+    top: 370px;
+  }
+}
+@media (max-width: 760px) {
+  .search-box {
+    top: 340px;
+  }
+}
+@media (max-width: 670px) {
+  .search-box {
+    top: 370px;
+  }
+}*/
+/*
+@media (max-width: 450px) {
+  .search-box {
+    top:420px;
+  }
+}*/
+/*end of responsive*/

@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="/static/css/messages.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+    />     
+</head>
+{% for message in messages %}
+<!--{{message.tags}}--> 
+<div class="message_wrapper {{message.tags}}">
+<div class="all_tags">
+ {{ message }}
+ </div>
+ <span class="fa fa-close stop"></span>
+</div>
+{% endfor %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/static/script/show_pass_icon/show_p_icon.js"></script>
+<script>
+    $(".stop").click(function(){
+        $(".message_wrapper").hide();
+      });
+</script>

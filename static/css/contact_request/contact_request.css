@@ -1,0 +1,247 @@
+
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*contact heading*/
+h1{
+	text-align: center;
+	padding: 25px;
+  background: linear-gradient(-135deg,#be02da,#402a89);
+  color: white;
+  font-family:  HindSiliguri_Medium;
+}
+
+@media screen and (max-width:900px){
+   h1{
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width:540px){
+   h1{
+    font-size: 22px;
+  }
+}
+.abedon {
+  margin:50px 20% 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+}
+.center {
+  margin: auto;
+  width: 300px;
+  position: relative;
+  height: 50px;
+  background: #ff0000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  transition: all 0.5s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ /* padding: 20px 60px;/*border: 3px solid #73AD21;**/
+}
+sup{
+  color: #ff0000;
+}
+.center i{
+  font-size: 38px;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+}
+.center p{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  width: 85%;
+}/*
+.abedon form{
+ 
+}*/
+.abedon form input[type="text"],[type="email"]{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  margin-top: 3px;
+  padding-left: 8px;
+}
+
+ table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+th{
+  height: 40px;
+}
+td {
+  height: 70px;
+  text-align: center;
+}
+td select{
+  background: #402a89;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding:2px 8px;
+  color:white;
+  font-size: 20px;
+}
+ select option{
+  background: #402a89;
+  color: white;
+
+}
+td span{
+  background: #402a89;
+  padding:6px 10px;
+  border-radius: 3px;
+  color:white;
+}
+.abedon form .radio{
+  margin-bottom: 20px;
+  border: 1px solid black;
+ height: 42px;
+ width: 100%;
+ background: #e1e1e1;
+ cursor: pointer;
+ padding-left: 10px;
+ margin-top: 8px;
+ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.abedon form .radio input{
+  margin-top: 10px;
+ }
+ .abedon form .radio label{
+  font-size:22px;
+  cursor: pointer;
+ }
+
+.img1{
+  float: right;
+  cursor: pointer;
+}
+.bkash,.rocket,.nagad{
+  display: none;
+  
+}
+.bkash,.bka{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.bka label{
+  background: #402a89;
+  padding:6px 10px 0;
+  color:white;
+}
+.bka input{
+  min-width:244px;
+  padding:10px;
+  max-width:50%;
+}
+.taka{
+  background: #402a89;
+  padding: 2px 10px;
+  color: white;
+}
+
+input[type='radio'] {
+  -webkit-appearance:none;
+  width:20px;
+  height:20px;
+  border:1px solid darkgray;
+ 
+  outline:none;
+  box-shadow:0 0 5px 0px gray inset;
+  
+}
+
+input[type='radio']:hover {
+  box-shadow:0 0 5px 0px orange inset;
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;    
+}
+input[type='radio']:checked:before {
+  background:green;
+}
+.btn{
+  border-bottom: 2px solid grey;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #402a89;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin:20px 5px;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@media screen and (max-width:1100px){
+  .abedon {
+    margin-left:8%;
+    margin-right:8%;
+  }
+}
+@media screen and (max-width:700px){
+  .abedon {
+    margin-left:5%;
+    margin-right:5%;
+  }
+}
+

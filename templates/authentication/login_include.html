@@ -1,0 +1,37 @@
+<head>
+<link rel="stylesheet" href="/static/css/authentication/login.css">
+
+</head>
+<body>
+	{% if user.is_authenticated is False %}
+	<div class="authent">
+		{% include "messages.html" %}
+		<div class="btn1">
+			<span><button class="button button1">Sign in</button><a href="{% url 'signup' %}"><button class="button button2">New Account</button></a><span>			
+		</div>	
+		<p class="or">or</p>
+		<form action="" method="post">
+			{% csrf_token %} 
+			<div class="con"> 
+				<i class="fas fa-user-circle"></i>
+				  <input class="input" type="text" placeholder="Username/Handle" name="username" value="{{user_name}}"required>
+			</div>
+			<div class="con_password"> 
+				<i class="fas fa-lock"></i>
+			  <input class="input" type="password" id="password" placeholder="Password" name="password" value="{{pass_word}}" required>
+			  <i class="fas fa-eye show"></i>
+			</div>
+			  <div class="befor_submit">
+			   <span><input type="checkbox"  name="remember"> Remember me</span>
+			 </div> 
+			  <button type="submit">Log in</button>			
+		  </form>
+		  <p class="last_line">Don't have an account?<a href="{% url 'signup' %}">Create Account Now</a></p>
+	</div>
+	{% else %}
+	{% include "is_authenticated.html" %}
+	{% endif %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/static/script/show_pass_icon/show_p_icon.js"></script>
+</body>
+</html>

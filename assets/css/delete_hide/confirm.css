@@ -1,0 +1,31 @@
+h1{
+    font-weight: 500;
+}
+.confirm_wrap{
+    margin: 100px 10% 14%;
+}
+.button {
+    background-color: #402a89;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 30px 2px;
+    opacity: 0.9;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+  .button:hover {opacity: 1}
+  @media only screen and (max-width: 440px) {
+  h1{
+      font-size: 28px;
+      font-weight: 600;
+  }
+  p{
+      font-size: 18px;
+  }
+}

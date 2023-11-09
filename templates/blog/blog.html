@@ -1,0 +1,51 @@
+
+<head>
+    <link rel="stylesheet" href="/static/css/course_details/course_details.css" />
+    <!--for boostrap icon-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+<body>
+    
+    <h1 style=" text-align: center;
+    padding: 25px;
+      background: #1d6b87;
+    font-family:  HindSiliguri_Medium;
+    color: white;">ব্লগ</h1>
+    <div class="container mt-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        {% for blog in blog %}
+    <div class="card" style="width:400px">
+      <img class="card-img-top" src="{{blog.img.url}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h5 class="card-title" style="font-family:  HindSiliguri_Medium;">{{blog.title}}</h5>
+        <p class="card-text">
+            {% with text=blog.content %}
+            {% if text|wordcount > 15 %}
+            <div class="half-content" id="half-{{ blog.pk }}">{{text|safe|linebreaks|truncatewords:20}}<a data-id="{{ blog.pk }}" href="{% url 'blog_post_details' blog.title %}" class="show-hide-btn"><br>Read more</a></div>
+            <!--div class="full-content" style="display: none;" id="full-{{blog.pk }}" >{{ text|safe|linebreaks }}<a data-id="{{ blog.pk}}" href="javascript:void();" class="show-hide-btn">Read less</a>
+            </div>-->
+            {% else %}
+                <p>
+            {{ text|safe|linebreaks }}
+            </p>
+            {% endif %}
+            {% endwith %}
+        </p>
+       
+      </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+  $(".show-hide-btn").click(function() {
+    var id = $(this).data("id");
+    $("#half-" + id).toggle();//hide/show..
+    $("#full-" + id).toggle();
+  })
+})
+</script>
+</body>

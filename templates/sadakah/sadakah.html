@@ -1,0 +1,69 @@
+<head>
+    <link rel="stylesheet" href="/static/css/sadakah/sadakah.css" />
+</head>
+<body>
+<h1>সাদাকাহ </h1>
+<div class="madhom">
+    <h3>সাদাকাহ পাঠানোর মাধ্যম</h3>
+    <div class="flex-container">
+        <div class="flex-item-left">
+            <img class="img1" src="/static/css/contact_request/4.png" alt="Bkash" width="200" height="100">
+            <p>01789-612005</p>
+        </div>
+        <div class="flex-item-mid">
+            <img class="img1" src="/static/css/contact_request/2.png" alt="Bkash" width="200" height="100">
+            <p>01789-612005</p>
+        </div>
+        <div class="flex-item-right">
+            <img class="img1" src="/static/css/contact_request/3.png" alt="Bkash" width="200" height="100">
+            <p>01789-612005</p>
+        </div>
+      </div>
+</div>
+<div class="form">
+    <h2 style="padding-top:60px">ডোনেট ফর্ম</h2>
+    <div class="contact_form">
+        <p>আপনি টাকা পাঠিয়ে নিম্নোক্ত ফর্ম পূরণ করে দিন</p>
+        <form action="" method="post">
+          {% csrf_token %}
+          <fieldset>
+            <legend>নাম 
+            </legend>
+            <input type="text" name="contact_name" placeholder="Name"/><br />
+          </fieldset>
+          <fieldset>
+            <legend>ইমেইল <sup>*</sup>
+            </legend>
+            <input type="email" name="contact_email" placeholder="Email" required/><br />
+          </fieldset>
+          <fieldset>
+            <legend>মোবাইল নাম্বার <sup>*</sup>
+            </legend>
+            <input type="text" name="number" placeholder="Mobile Number" required/><br />
+          </fieldset>
+          <fieldset>
+            <legend>অনুদানের পরিমাণ <sup>*</sup>
+            </legend>
+            <input type="text" name="amount" required/><br />
+          </fieldset>
+          <fieldset>
+            <legend>অনুদানের মাধ্যম <sup>*</sup>
+            </legend>
+            <select name="donete_madhom">
+                <option value="bkash">বিকাশ</option>
+                <option value="rocket">রকেট</option>
+                <option value="nagad">নগদ</option>
+              </select><br />
+          </fieldset>
+          <fieldset>
+            <legend>ট্রাঞ্জেকশন আইডি <sup>*</sup>
+            </legend>
+            <input type="text" name="TransactionID" required/><br />
+          </fieldset>
+          <div class="btn">
+          <button class="button" type="submit" style="vertical-align:middle"><span>Submit Form </span></button>
+        </div>
+        </form>
+      </div>
+</div>
+</body>

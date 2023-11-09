@@ -1,0 +1,38 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="static/css/home_middle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--ai ta use korle kichu icon shpae change hoye jay.so trying to avoid this.
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  -->
+<!--<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"
+/>-->
+<!--for boostrap icon-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+<div class="container my-5">
+<div class="container my-5">
+    <h4 style="font-weight:900;color:blueviolet;text-align:center">{{designation}} কোর্সসমূহ</h4>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    {% for course in course %}
+    <div class="col">
+      <div class="card">
+        <img src="{{course.img.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight:700;color:blueviolet">{{course.title}}</h5>
+          <p class="card-text"><span><i class="bi bi-person-fill"></i>  {{course.usercourse_set.all.count}}</span>&emsp;<span><i class="bi bi-clock-history"></i> {{course.duration}}</span></p>
+          <!--<p class="card-text">{{course.instructor}}</p>-->
+          <a href="{% url 'course_details' course.slug %}" class="btn btn-primary">বিস্তারিত জানুন</a>
+          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

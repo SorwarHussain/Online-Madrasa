@@ -1,0 +1,76 @@
+  <head>
+    <link rel="stylesheet" href="/static/css/contact_page/contact_first.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<link
+rel="stylesheet"
+href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+crossorigin="anonymous"
+/>
+  </head>
+  <body>
+    <!--heading-->
+    <div class="contact_heading">
+      <!--<h1>যে কোন তথ্য জানতে</h1>-->
+      <h1>Contact Us</h1>
+      <p>Contact the Help Team</p>
+    </div>
+    <!--end of heading-->
+    <!--contact page email phone-->
+    <div class="contact_e_p">
+      <div class="contact_e">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZcRPPtNjpRHMZgprBtpnZsMfSZqCJSgZBsPlGTRgQwVwlHxflxgwvNpZJxHNBjWkvxPSV" target="_blank">
+        <p><i class="fas fa-envelope"></i></p></a>
+        <div class="contact_e_h">
+        <h1>Email:</h1>
+        <h4>Cse17@gmail.com</h4>
+        </div>
+      </div>
+      <div class="contact_p">
+        <p><i class="fas fa-phone-alt"></i></p>
+        <div class="contact_p_h">
+        <h1>Call:</h1>
+        <h4>+01789-612005</h4>
+        </div>
+      </div>
+    </div>
+
+    <!--end of contact_email_phone div-->
+    <!--start contact page form-->
+    <div class="contact_form">
+      <p>আপনার যেকোনো জিজ্ঞাসা নিম্নোক্ত ফর্মে পূরণ করে পাঠিয়ে দিন</p>
+      <form action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+          <legend>নাম <sup>*</sup>
+          </legend>
+          <input type="text" name="contact_name" placeholder="Name"required/><br />
+        </fieldset>
+        <fieldset>
+          <legend>ইমেইল <sup>*</sup>
+          </legend>
+          <input type="email" name="contact_email" placeholder="Email" required/><br />
+        </fieldset>
+        <fieldset>
+          <legend>বিষয় <sup>*</sup>
+          </legend>
+          <input type="text" name="contact_subject" placeholder="Subject" required/><br />
+        </fieldset>
+        <fieldset>
+          <legend>মেসেজ <sup>*</sup>
+          </legend>
+          <textarea  name="message" rows="5" cols="30" placeholder="Your message" required></textarea>
+        </fieldset>
+        <div class="btn">
+        <button class="button" type="submit" style="vertical-align:middle"><span>পাঠান </span></button>
+      </div>
+      </form>
+    </div>
+
+<!--end of contact page form-->
+  <script>
+   
+  </script>
+  </body>
+</html>

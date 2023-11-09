@@ -1,0 +1,25 @@
+/*if user if authenticated*/
+h1{
+	text-align: center;
+	padding: 200px 50px;
+	font-weight: 1000;
+}
+@media screen and (max-width:666px){
+  h1{
+    font-size: 28px;
+    font-weight: 800;
+  }
+}
+@media screen and (max-width:440px){
+  h1{
+    font-size: 24px;
+    font-weight: 800;
+  }
+}
+@media screen and (max-width:400px){
+  h1{
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+/*endof if user if authenticated*/

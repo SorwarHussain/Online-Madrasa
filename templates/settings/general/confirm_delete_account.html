@@ -1,0 +1,17 @@
+<head>
+    <link rel="stylesheet" href="/static/css/delete_hide/confirm.css">
+</head>
+<div class="confirm_wrap">
+<h1>Delete Account?</h1>
+<p>Are you sure to want delete your account? Remember all data will be permanently lost if you delete your account. You will never be able to retrieve that information.</p>
+<form method="POST" action="">
+    {% csrf_token %}
+    {% if user.is_authenticated %}
+    <input type="submit" value="Delete" name="delete" class="button"/>  
+    {% else %}
+    <a href="/" class="button">Sorry </a> 
+    {% endif %}
+    <a href="/" class="button">Cancel </a>
+    
+</form> 
+</div>

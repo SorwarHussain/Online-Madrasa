@@ -1,0 +1,129 @@
+body{
+	margin:0;
+	font-family: KohinoorBangla_Regular;
+}
+*{
+	box-sizing: border-box;
+}
+h1{
+	text-align: center;
+	padding: 25px;
+	
+	background: linear-gradient(-135deg,#be02da,#402a89);
+	color: white;
+	font-family: HindSiliguri_Medium;
+}
+.accordian{
+	max-width:1000px;
+	display: block;
+	margin:54px auto;
+}
+.accordian .card{
+	box-shadow: 0px 0px 20px #d4d4d4;
+	margin-bottom:20px;
+	/*float: left;*/
+	width: 100%;
+	/*border-radius: 10px;*/
+}
+.accordian .card .card-header h3{
+	cursor: pointer;
+	color:#ffffff;
+	position: relative;
+	/*background-color:  red;*/
+	margin:0;
+	padding:15px 20px;
+	font-size: 24px;
+	/*border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;*/
+	/*border-radius: 10px;*/
+	margin-right: 40px;
+	font-family: KohinoorBangla_Regular;
+}
+.accordian .card .card-header {
+	position: relative;
+	border-top-left-radius: 10px;
+	background-color:  #402a89;
+	border-radius: 10px;
+}
+.accordian .card .card-header span{
+	position: absolute;
+	right:20px;
+	top:0;
+	bottom: 0;
+	height:25px;
+	width:25px;
+	margin: auto;
+	color:white;
+	/*background-color: rgb(151, 94, 21);*/
+	background: #be02da;
+	border-radius:50%;
+	text-align: center;
+	line-height:25px;
+	font-size:13px;
+	
+}
+.accordian .card .card-body{
+	padding:20px;
+}
+.accordian .card .card-body{
+	display: none;
+}
+/*open one card by default*/
+.accordian .card:nth-child(1) .card-body{
+ display: block;
+}
+.accordian .card .card-body p{
+	font-size: 22px;
+	
+	line-height:40px;
+	color:#444444;
+	margin:0px;
+	font-family: HindSiliguri_Regular;
+}
+@media screen and (max-width:1120px){
+	.accordian{
+		padding:0 8%;
+	}
+}
+@media screen and (max-width:930px){
+	h1{
+        padding: 20px;
+        font-size: 30px;
+    }
+	.accordian .card .card-header h3{
+		font-size: 22px;
+	}
+	.accordian .card .card-body p{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width:680px){
+	.accordian{
+		padding:25px;
+	}
+	h1{
+        padding: 16px;
+        font-size: 26px;
+    }
+}
+@media screen and (max-width:500px){
+	.accordian .card .card-header h3{
+		font-size: 16px;
+	}
+	.accordian .card .card-body p{
+		font-size: 16px;
+	}
+}
+@media screen and (max-width:450px){
+	.accordian{
+		padding:15px;
+	}
+}
+
+
+
+
+
+
+

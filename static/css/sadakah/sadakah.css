@@ -1,0 +1,144 @@
+h1{
+    text-align: center;
+    padding: 25px;
+      background: #1d6b87;
+    font-family:  HindSiliguri_Medium;
+    color: white;
+  }
+h3,h2{
+    font-family:  HindSiliguri_Medium;
+    font-weight: 800;  
+    padding: 35px; 
+    text-align: center;
+}
+.madhom{
+    background: #e1e1e1;
+   padding-bottom: 50px;
+  }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left,.flex-item-mid, .flex-item-right{
+  padding: 10px;
+  flex: 30%;
+}
+p{
+    font-size: 20px;
+    font-weight: 600;
+}
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-mid, .flex-item-left {
+    flex: 100%;
+  }
+  .flex-item-left, .flex-item-mid{
+    margin-bottom: 50px;
+    border-bottom: 1px solid #1d6b87;
+  }
+}
+/* form*/
+.form{
+    padding-bottom: 50px;
+}
+/*start of contact page form*/
+.contact_form {
+/*border: 1px solid sandybrown;*/
+margin: 50px 20% 5% 20%;
+padding: 30px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact_form p,.contact_form form{
+width: 100%;
+font-size: 18px;
+
+}
+.contact_form p{
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 30px;
+font-family: KohinoorBangla_Regular;
+}
+.contact_form input,textarea,select{
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+
+}
+.contact_form input{
+height: 34px;
+}
+.contact_form fieldset{
+border: none;
+}
+.contact_form fieldset legend{
+margin-bottom: 6px;
+font-weight: 900;
+font-family: HindSiliguri_Regular;
+}
+.contact_form sup {
+color: red;
+}
+.contact_form .btn {
+text-align: center;
+
+}
+.button {
+display: inline-block;
+border-radius: 4px;
+background-color: #1d6b87;
+
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 28px;
+padding: 20px;
+width: 260px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px auto;
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+font-family: HindSiliguri_Medium;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+@media screen and (max-width:780px){
+.contact_form {
+margin: 50px 10% 0 10%;
+padding: 30px;
+}
+
+}
+@media screen and (max-width:480px){
+.contact_form {
+margin: 50px 5% 0 5%;
+padding: 15px;
+}
+}
+
+/*end of contact page form*/

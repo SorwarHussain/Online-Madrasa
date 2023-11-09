@@ -1,0 +1,133 @@
+  <head>
+    <link rel="stylesheet" href="static/css/home_middle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--ai ta use korle kichu icon shpae change hoye jay.so trying to avoid this.
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  -->
+<!--<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"
+/>-->
+<!--for boostrap icon-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<style>
+  a,a:hover{
+    text-decoration: none;
+    color: white;
+  }
+
+</style>
+</head>
+
+
+<div class="container my-5">
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/image/1.jpg" alt="madrasa" class="d-block" style="width:100%;height:500px">
+      <div class="carousel-caption">
+        <h3>দারুল উলূম মাদরাসা</h3>
+        <p>এটি শেখা - শেখানোর অনলাইন প্লাটফর্ম </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/image/2.jpg" alt="madrasa" class="d-block" style="width:100%;height:500px">
+      <div class="carousel-caption">
+        <h3>দারুল উলূম মাদরাসা</h3>
+        <p>ইলম অর্জনে আপনার বিশ্বস্ত সহযোগী</p>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="/static/image/3.jpg" alt="madrasa" class="d-block" style="width:100%;height:500px">
+      <div class="carousel-caption text-warning">
+        <h3>দারুল উলূম মাদরাসা</h3>
+        <p>ইলমের নেশা অটল থাকুক আমরণ</p>
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<!--short course-->
+<div class="container my-5">
+  <h4 style="font-weight:900;color:blueviolet;text-align:center">জনপ্রিয় কোর্স</h4>
+ </div>
+ <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+  {% for course in course %}
+  <div class="col">
+    <div class="card">
+      <img src="{{course.img}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight:700;color:blueviolet">{{course.title}}</h5>
+        <p class="card-text"><span><i class="bi bi-person-fill"></i>  {{course.usercourse_set.all.count}}</span>&emsp;<span><i class="bi bi-clock-history"></i> {{course.duration}}</span></p>
+        <!--<p class="card-text">{{course.instructor}}</p>-->
+        <a href="{% url 'course_details' course.slug %}" class="btn btn-primary">বিস্তারিত জানুন</a>
+        
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+<!--4 column short summarystyle="padding-top: 100px;"style="padding-left:0px; "-->
+<div class="container-fluid px-0" >
+  <div class="row text-center  mb-5" style="padding: 80px 0px; background-image: linear-gradient(to right, #1037a6 , #8862da);">
+    <div class="col-sm  text-white p-3">
+      <div class="row text-center ">
+        <span ><i class="bi bi-person-fill p-2 px-3" style="font-size: 46px;border: 1px solid black;border-radius: 50%;background: rgb(16, 31, 43);"></i></span>
+      </div>
+     
+      <div class="row text-center pt-3">
+        <span style="margin-bottom: o;"> {{total_student}}+ </span><br>
+        <span>শিক্ষার্থী</span>
+      </div>
+    </div>
+    <div class="col-sm  text-white p-3">
+      <a href="{% url 'instructors' %}"><div class="row text-center ">
+        <span ><i class="bi bi-person-fill p-2 px-3" style="font-size: 46px;border: 1px solid black;border-radius: 50%;background: rgb(16, 31, 43);"></i></span>
+      </div>
+     
+      <div class="row text-center pt-3">
+        <span style="margin-bottom: o;">{{instructor}} </span><br>
+        <span>শিক্ষক</span>
+      </div></a>
+    </div>
+    <div class="col-sm  text-white p-3">
+      <a href="{% url 'free_courses' %}"><div class="row text-center ">
+        <span ><i class="bi bi-book p-2 px-3" style="font-size: 46px;border: 1px solid black;border-radius: 50%;background: rgb(16, 31, 43);"></i></span>
+      </div>
+     
+      <div class="row text-center pt-3">
+        <span style="margin-bottom: o;"> {{freeCourse}}</span><br>
+        <span>ফ্রি কোর্স</span>
+      </div></a>
+    </div>
+    <div class="col-sm  text-white p-3">
+      <a href="{% url 'paid_courses' %}"> <div class="row text-center ">
+      <span ><i class="bi bi-book p-2 px-3" style="font-size: 46px;border: 1px solid black;border-radius: 50%;background: rgb(16, 31, 43);"></i></span>
+    </div>
+   
+    <div class="row text-center pt-3">
+      <span style="margin-bottom: o;"> {{paidCourse}}</span><br>
+      <span>পেইড কোর্স </span>
+    </div></a></div>
+  </div>  
+</div>

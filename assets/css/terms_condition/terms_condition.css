@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+    padding: 25px;
+	background: linear-gradient(-135deg,#be02da,#402a89);
+  color: white;
+  font-family:  HindSiliguri_Medium;
+}
+.descrip{
+    margin: 50px 20% 80px;
+    font-size: 18px;
+}
+.descrip .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.descrip .ul_terms{
+    margin:10px 0  0 30px;
+}
+@media (max-width: 1030px) {
+    h1{
+        padding: 20px;
+        font-size: 30px;
+    }
+    .descrip{
+        margin: 50px 10% 80px;
+    }
+    .descrip .title{
+        font-size: 26px;
+        font-weight: 600;
+    }
+}
+@media (max-width: 560px) {
+    h1{
+        padding: 16px;
+        font-size: 26px;
+    }
+    .descrip{
+        margin: 50px 6% 80px;
+        font-size: 16px;
+    }
+    .descrip .title{
+        font-size: 22px;
+        font-weight: 600;
+    }
+}

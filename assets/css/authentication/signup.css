@@ -1,0 +1,179 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.authent {
+  background: white;
+  width: 600px;
+  height: auto;
+  margin: 5% auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.authent .button {
+  background: gray;
+  width: 50%;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-top: 5px solid gray;
+}
+.authent .button2 {
+  background: white;
+  border-top: 5px solid #402a89;
+}
+.authent .social a {
+  text-decoration: none;
+  display: block;
+  width: 60%;
+  height: 55px;
+  border: 1px solid #402a89;
+  margin: 30px auto 10px;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+  padding-left: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.authent .social a img {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+}
+.authent .social a:hover {
+  color: #be02da;
+  border-color: #402a89;
+  transition: 0.3s all ease;
+}
+.authent .social a:focus {
+  transition: 0.3s all ease;
+  outline: 3px solid rgba(29, 128, 90, 0.5);
+}
+.authent .or {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.authent form .con {
+  margin: 0px 5% 20px;
+  width: 90%;
+  height: 50px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid rgba(8, 13, 20, 0.5);
+}
+.authent form .con_password{
+  margin: 2px 5% 20px;
+  width: 90%;
+  height: 50px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid rgba(8, 13, 20, 0.5);
+}
+.authent form i {
+  font-size: 20px;
+  padding: 0 10px;
+}
+.authent form .con .input {
+  width: 89.51%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.authent form .con_password .input{
+  width: 83%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-right: 0;
+}
+.authent form .con_password .show{
+  width:5%;
+ padding-left: 0;
+ margin-right: 0;
+ padding-right: 0;
+ margin-left: 0;
+ cursor: pointer;
+}
+.authent button[type="submit"] {
+  width: 90%;
+  height: 44px;
+  margin: 8px 5%;
+  background: #402a89;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.authent button[type="submit"]:hover {
+  background: #be02da;
+}
+
+.authent .last_line {
+  margin: 10px 5%;
+  padding-bottom: 20px;
+}
+.authent .last_line a:hover {
+  color: #be02da;
+  font-weight: 600;
+}
+/*responsive*/
+@media screen and (max-width:700px){
+  .authent {
+    width: 90%;
+    margin-top: 15%;
+  }
+  .authent .last_line {
+   font-size: 16px;
+  }
+}
+@media screen and (max-width:570px){
+  .authent form .con_password{
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width:540px){
+  .authent form .con .input {
+    width: 86%;
+  }
+  .authent form .con_password .input{
+    width: 78%;
+  }
+}
+@media screen and (max-width:470px){
+ .authent .social a {
+    width: 70%;
+  }
+  .authent {
+    width: 94%;
+  }
+}
+@media screen and (max-width:400px){
+  .authent .social a {
+    width: 80%;
+  }
+  .authent form .con .input {
+    width: 84%;
+  }
+  .authent form .con_password .input{
+    width: 76%;
+  }
+}

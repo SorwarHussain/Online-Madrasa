@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="static/css/home_middle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--ai ta use korle kichu icon shpae change hoye jay.so trying to avoid this.
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  -->
+<!--<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"
+/>-->
+<!--for boostrap icon-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+<div class="container my-5">
+<div class="container my-5">
+    <h4 style="background:#c5c5c5;font-weight:900;color:blueviolet;text-align:center;padding: 5px;">শিক্ষক</h4>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    {% for ustad in ustad %}
+    <div class="col">
+      <div class="card">
+        <img class="img rounded-circle mx-auto d-block" src="/static/image/man.jpg" alt="..."  style="width:50%">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight:700;color:blueviolet">{{ustad.name}}</h5>
+          <p class="card-text">{{ustad.title}}</p>
+          <a href="{% url 'ustaz' ustad.name %}" class="btn btn-primary">বিস্তারিত</a>
+          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="container my-5">
+    <h4 style="background:#c5c5c5;font-weight:900;color:blueviolet;text-align:center;padding: 5px;">শিক্ষিকা</h4>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    {% for ustadi in ustadi %}
+    <div class="col">
+      <div class="card">
+        <img class="img rounded-circle mx-auto d-block" src="/static/image/8.jpeg" alt="..."  style="width:50%">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight:700;color:blueviolet">{{ustadi.name}}</h5>
+          <p class="card-text"><span>{{ustadi.title}}</span></p>
+          <a href="{% url 'ustaz' ustadi.name %}" class="btn btn-primary">বিস্তারিত</a>
+          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
